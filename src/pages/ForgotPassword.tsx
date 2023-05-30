@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
 import { AuthState } from '../redux/reducer/Reducer';
 import { passwordResetConfirmationRequest } from '../redux/actions/Action';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const ForgotPassword = () => {
-  const dispatch = useDispatch();
   const errorMessage = useSelector((state: AuthState) => state.errorMessage);
   const isLoading = useSelector((state: AuthState) => state.isLoading);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');

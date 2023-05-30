@@ -11,7 +11,6 @@ import {
   signUpSuccess,
 } from '../redux/actions/Action';
 import { schema } from '../components/Schema';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 type SignUpFormData = {
   email: string;
